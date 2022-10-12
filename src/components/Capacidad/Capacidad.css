@@ -1,0 +1,47 @@
+.Capacidad {
+  max-width: 1500px;
+  width: 100%;
+  display: grid;
+  grid-template: auto 1fr / 1fr 1fr;
+  padding: 3rem 5rem;
+  gap: 5rem;
+  margin: 5rem 0 2rem 0;
+}
+
+.Capacidad__titulo {
+  grid-column: 1 / -1;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.Capacidad__textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  line-height: 1.25;
+  font-size: 1rem;
+}
+
+.Capacidad__subtitulo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.Capacidad__contenedor_botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.Capacidad__boton {
+  background-color: black;
+  color: white;
+  padding: .75rem 1.5rem;
+  border-radius: .35rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.Capacidad__boton--secundario {
+  background-color: gray;
+}

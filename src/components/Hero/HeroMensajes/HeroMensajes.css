@@ -1,0 +1,27 @@
+.HeroMensajes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  place-self: center start;
+  gap: 2rem;
+}
+
+.HeroMensajes__titulo {
+  font-size: 2.5rem;
+  line-height: 1.35;
+  font-weight: bold;
+}
+
+.HeroMensajes__bajada {
+  line-height: 1.35;
+  font-size: 1rem;
+}
+
+.HeroMensajes__boton {
+  background-color: black;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: .35rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}

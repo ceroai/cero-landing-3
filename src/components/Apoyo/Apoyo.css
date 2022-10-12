@@ -1,0 +1,23 @@
+.Apoyo {
+  max-width: 1500px;
+  width: 100%;
+  padding: 5rem;
+  font-size: 1.5rem;
+}
+
+.Apoyo__logo_cero {
+  width: 10rem;
+  margin-right: .75rem;
+  transform: translateY(.25rem);
+}
+
+.Apoyo__logos {
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.Apoyo__logo_apoyador {
+  width: 15rem;
+}

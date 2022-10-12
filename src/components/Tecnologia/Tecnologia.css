@@ -1,0 +1,47 @@
+.Tecnologia {
+  max-width: 1500px;
+  width: 100%;
+  display: grid;
+  grid-template: auto 1fr / 1fr 1fr;
+  padding: 3rem 5rem;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+
+.Tecnologia__titulo {
+  grid-column: 1 / -1;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.Tecnologia__textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  line-height: 1.25;
+  font-size: 1rem;
+}
+
+.Tecnologia__subtitulo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.Tecnologia__contenedor_botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.Tecnologia__boton {
+  background-color: black;
+  color: white;
+  padding: .75rem 1.5rem;
+  border-radius: .35rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.Tecnologia__boton--secundario {
+  background-color: gray;
+}

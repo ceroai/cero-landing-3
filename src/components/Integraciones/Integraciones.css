@@ -1,0 +1,51 @@
+.Integraciones__fondo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: lightgray;
+  --int-padding: 8rem;
+  padding: var(--int-padding) 0;
+  clip-path: polygon(0% 0%, 100% var(--int-padding), 100% calc(100% - var(--int-padding)), 0% 100%);
+}
+
+.Integraciones {
+  max-width: 1500px;
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  padding: 5rem 5rem;
+  gap: 5rem;
+}
+
+.Integraciones__textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  line-height: 1.25;
+  font-size: 1rem;
+}
+
+.Integraciones__subtitulo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.Integraciones__contenedor_botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.Integraciones__boton {
+  background-color: black;
+  color: white;
+  padding: .75rem 1.5rem;
+  border-radius: .35rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.Integraciones__boton--secundario {
+  background-color: gray;
+}

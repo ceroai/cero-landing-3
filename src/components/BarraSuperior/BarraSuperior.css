@@ -1,0 +1,41 @@
+.BarraSuperior {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  border-top: solid .35rem purple;
+  box-shadow:
+    0 0 .3rem -.1rem rgba(0, 0, 0, .2);
+  padding: 0 5rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  background-color: white;
+}
+
+.BarraSuperior__logo {
+  width: 4.25rem;
+  cursor: pointer;
+}
+
+.BarraSuperior__navegacion {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.BarraSuperior__navegacion_link {
+  background: none;
+  font-weight: 500;
+}
+
+.BarraSuperior__navegacion_boton {
+  background-color: black;
+  color: white;
+  padding: .55rem .75rem;
+  border-radius: .35rem;
+  font-weight: 600;
+  font-size: .8rem;
+}

@@ -1,0 +1,10 @@
+.HeroLogos {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 3;
+}
+
+.HeroLogos__logo {
+  width: 10rem;
+}

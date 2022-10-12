@@ -1,0 +1,68 @@
+.HeroBajada {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  grid-column: 1 / -1;
+  padding: 5rem 0 .5rem 0;
+  font-size: 1.25rem;
+  position: relative;
+}
+
+.HeroBajada__texto {
+  position: relative; 
+}
+
+.HeroBajada__marquee {
+  background-color: white;
+  position: absolute;
+  right: -.35rem;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  font-weight: bold;
+  animation: marquee-profesiones 10s ease infinite both;
+}
+
+.HeroBajada__marquee_tapa {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5.5rem;
+  background-color: white;
+  right: -.35rem;
+  top: -5.5rem;
+  z-index: 2;
+}
+
+.HeroBajada__marquee_tapa--inferior {
+  top: calc(100% + .25rem);
+}
+
+@keyframes marquee-profesiones {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(calc(-25%));
+  }
+  45% {
+    transform: translateY(calc(-25%));
+  }
+  50% {
+    transform: translateY(calc(-50% - .125rem));
+  }
+  70% {
+    transform: translateY(calc(-50% - .125rem));
+  }
+  75% {
+    transform: translateY(calc(-75% - .125rem));
+  }
+  100% {
+    transform: translateY(calc(-75% - .125rem));
+  }
+}

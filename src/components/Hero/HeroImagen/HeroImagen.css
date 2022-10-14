@@ -3,6 +3,7 @@
   place-items: center start;
   position: relative;
   z-index: 3;
+  font-family: Inter;
 }
 
 .HeroImagen__agenda {
@@ -16,6 +17,8 @@
     -.15rem .15rem .5rem rgba(0, 0, 50, .05),
     -.35rem .35rem .5rem rgba(0, 0, 50, .05),
     0 0 0 .35rem lightgray;
+  background: white;
+  color: black;
 }
 
 .HeroImagen__agenda_superior {
@@ -97,7 +100,7 @@
 .HeroImagen__celular {
   position: absolute;
   width: 12rem;
-  height: 15rem;
+  height: 25rem;
   background: linear-gradient(lightgray 0 1rem, lightcyan 0 3rem, white 0);
   border-radius: 1.15rem 1.15rem 0 0;
   box-shadow: 0 0 0 .6rem black;
@@ -114,18 +117,18 @@
 }
 
 .HeroImagen__celular--3 {
-  right: -12rem;
+  right: -15rem;
   top: 20%;
 }
 
 .HeroImagen__celular--5 {
   right: -6rem;
-  top: 60%;
+  top: 55%;
 }
 
 .HeroImagen__celular--6 {
-  right: 30%;
-  top: 80%;
+  right: 35%;
+  top: 65%;
 }
 
 .HeroImagen__mensaje {

@@ -1,10 +1,19 @@
+.Hero__fondo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-4rem);
+}
+
 .Hero {
   max-width: 1500px;
   width: 100%;
   height: calc(100vh - 4rem);
   display: grid;
   grid-template: 1fr auto 15% / 1fr 1fr;
-  padding: 0 5rem;
+  padding: 4rem 5rem;
+  padding-bottom: 4rem;
+  color: black;
 }
 
 .Hero__bajada {

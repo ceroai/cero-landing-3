@@ -3,7 +3,7 @@
   width: 100%;
   display: grid;
   grid-template: auto 1fr / 1fr 1fr;
-  padding: 8rem 3rem 5rem 3rem;
+  padding: 4rem 3rem 5rem 3rem;
   gap: 5rem;
   margin: 5rem 0 2rem 0;
 }

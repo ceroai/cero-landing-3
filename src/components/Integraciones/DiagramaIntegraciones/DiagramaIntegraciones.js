@@ -1,4 +1,5 @@
 import { Icon } from '@iconify/react'
+import logoCero from '../../../assets/images/logo.svg'
 import './DiagramaIntegraciones.css'
 
 const integraciones = [
@@ -62,8 +63,8 @@ const DiagramaIntegraciones = () => {
         </div>
       </div>
       <div className="DiagramaIntegraciones__cero">
-        <div className="DiagramaIntegraciones__logo_cero">
-          CERO
+        <div className="DiagramaIntegraciones__contenedor_logo_cero">
+          <img src={logoCero} alt="Logo CERO" className="DiagramaIntegraciones__logo_cero" />
         </div>
       </div>
     </div>

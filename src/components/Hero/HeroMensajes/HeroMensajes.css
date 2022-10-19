@@ -25,3 +25,26 @@
   font-weight: 600;
   font-size: 1.25rem;
 }
+
+.HeroMensajes__logo {
+  height: .75rem;
+}
+
+@media (orientation: portrait) {
+
+  .HeroMensajes {
+    grid-column: span 2;
+    width: 100%;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .HeroMensajes__titulo {
+    text-align: center;
+  }
+  
+  .HeroMensajes__bajada {
+    text-align: center;
+    line-height: 1.5;
+  }
+}

@@ -50,6 +50,7 @@
 .BarraSuperior__navegacion_link {
   background: none;
   font-weight: 500;
+  font-size: .8rem;
 }
 
 .BarraSuperior__navegacion_boton {
@@ -59,4 +60,20 @@
   border-radius: .35rem;
   font-weight: 600;
   font-size: .8rem;
+}
+
+@media (orientation: portrait) {
+
+  .BarraSuperior {
+  }
+
+  .BarraSuperior__logo {
+  }
+
+  .BarraSuperior__navegacion_link {
+    display: none;
+  }
+
+  .BarraSuperior__navegacion_boton {
+  }
 }

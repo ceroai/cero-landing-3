@@ -15,10 +15,7 @@
   --int-padding: 9rem;
   padding: var(--int-padding) 0 6rem 0;
   clip-path: polygon(0% var(--int-padding), 100% 0%, 100% 100%, 0% 100%);
-  transform: translateY(-17rem);
-  position: absolute;
   z-index: 3;
-  top: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,4 +36,73 @@
 
 .Clientes__logo {
   width: 8rem;
+}
+
+.Clientes__logo_cero {
+  height: 1rem;
+  margin-right: .25rem;
+  transform: translateY(.1rem);
+}
+
+.Clientes__logo--redsalud {
+  transform: translateY(-10%);
+}
+
+.Clientes__logo--sanasalud {
+  width: 7rem;
+}
+
+.Clientes__logo--alemana {
+  width: 8.5rem;
+  transform: translateY(-5%);
+}
+
+.Clientes__logo--falp {
+  width: 5.5rem;
+  transform: translateY(-10%);
+}
+
+@media (orientation: portrait) {
+  .Clientes {
+  }
+
+  .Clientes__texto {
+    max-width: 50%;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .Clientes__logo {
+    width: 100%;
+  }
+
+  .Clientes__logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    place-items: center center;
+  }
+
+  .Clientes__logo--redsalud {
+    transform: translateY(-10%);
+  }
+  
+  .Clientes__logo--norden {
+    width: 100%;
+  }
+  
+  .Clientes__logo--sanasalud {
+    width: 90%;
+  }
+  
+  .Clientes__logo--alemana {
+    width: 100%;
+    transform: translateY(-5%);
+  }
+  
+  .Clientes__logo--falp {
+    width: 30%;
+    transform: translateY(-10%);
+    grid-column: span 2;
+  }
 }

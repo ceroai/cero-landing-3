@@ -79,3 +79,9 @@ strong {
   font-weight: 500;
   src: url('./assets/fonts/Inter-Medium.woff2');
 }
+
+@media (orientation: portrait) {
+	:root {
+		font-size: 1vh;
+	}
+}

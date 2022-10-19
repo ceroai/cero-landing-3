@@ -5,7 +5,7 @@ const Integraciones = () => {
   return (
     <div className="Integraciones__fondo">
       <div className="Integraciones">
-        <div>
+        <div className="Integraciones__contenedor_grafica">
           <DiagramaIntegraciones />
         </div>
         <div className="Integraciones__textos">

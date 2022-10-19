@@ -10,22 +10,13 @@ const Clientes = () => {
   return (
     <div className="Clientes">
       <div className="Clientes__texto">
-        <img src={logo} style={{ height: '1rem', marginRight: '.25rem', transform: 'translateY(.1rem)' }} alt="CERO" /> es usado por equipos de entre 10 y +10.000 <span style={{ opacity: 1 }}>psicólogos</span>
-        {/* <div className="HeroBajada__marquee_tapa" />
-        <div className="HeroBajada__marquee">
-          <div>psicólogos</div>
-          <div>dentistas</div>
-          <div>pediatras</div>
-          <div>psicólogos</div>
-        </div> */}
-        {/* <div className="HeroBajada__marquee_tapa HeroBajada__marquee_tapa--inferior" /> */}
+        <img src={logo} className="Clientes__logo_cero" alt="CERO" /> es usado por equipos de entre 10 y +10.000 profesionales
       </div>
       <div className="Clientes__logos">
         <img
-          className="Clientes__logo"
+          className="Clientes__logo Clientes__logo--redsalud"
           src={logoRedSalud}
           alt="Logo RedSalud"
-          style={{ transform: 'translateY(-10%)' }}
         />
         <img
           className="Clientes__logo"
@@ -33,22 +24,19 @@ const Clientes = () => {
           alt="Logo Norden"
         />
         <img
-          className="Clientes__logo"
+          className="Clientes__logo Clientes__logo--sanasalud"
           src={logoSanasalud}
           alt="Logo Sanasalud"
-          style={{ width: '7rem' }}
         />
         <img
-          className="Clientes__logo"
+          className="Clientes__logo Clientes__logo--alemana"
           src={logoAlemana}
           alt="Logo Alemana"
-          style={{ width: '8.5rem', transform: 'translateY(-5%)' }}
         />
         <img
-          className="Clientes__logo"
+          className="Clientes__logo Clientes__logo--falp"
           src={logoFALP}
           alt="Logo FALP"
-          style={{ width: '5.5rem', transform: 'translateY(-10%)' }}
         />
       </div>
     </div>

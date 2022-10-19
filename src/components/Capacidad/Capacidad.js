@@ -22,7 +22,7 @@ const Capacidad = () => {
           <button className="Capacidad__boton">Pruébalo ahora</button>
         </div>
       </div>
-      <div style={{ paddingLeft: '2rem' }}>
+      <div className="Capacidad__contenedor_grafica">
         <Celular />
       </div>
     </div>

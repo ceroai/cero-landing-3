@@ -153,3 +153,9 @@
 .HeroImagen__mensaje strong {
   font-weight: bold;
 }
+
+@media (orientation: portrait) {
+  .HeroImagen {
+    display: none;
+  }
+}

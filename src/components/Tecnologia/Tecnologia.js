@@ -19,7 +19,7 @@ const Tecnologia = () => {
           <button className="Tecnologia__boton">Pide tu prueba gratis</button>
         </div>
       </div>
-      <div>
+      <div className="Tecnologia__contenedor_grafica">
         <DiagramaTecnologia />
       </div>
     </div>

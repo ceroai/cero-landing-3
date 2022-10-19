@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  line-height: 1.25;
+  line-height: 1.35;
   font-size: 1rem;
 }
 
@@ -44,4 +44,25 @@
 
 .Capacidad__boton--secundario {
   background-color: gray;
+}
+
+@media (orientation: portrait) {
+
+  .Capacidad__contenedor_grafica {
+    display: none;
+  }
+
+  .Capacidad__titulo {
+    text-align: center;
+  }
+
+  .Capacidad__textos {
+    grid-column: 1 / -1;
+    place-self: center center;
+    text-align: center;
+  }
+
+  .Capacidad__contenedor_botones {
+    justify-content: center;
+  }
 }

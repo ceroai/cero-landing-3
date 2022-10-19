@@ -1,6 +1,91 @@
 .DiagramaIntegraciones {
-  width: 30rem;
+  width: 35rem;
   height: 20rem;
-  background-color: black;
-  border-radius: 2rem;
+  background-color: rgba(240, 240, 240);
+  border-radius: 1rem;
+  box-shadow:
+    0 .25rem .15rem rgba(255, 255, 255, .15),
+    0 .25rem 1rem rgba(255, 255, 255, .15);
+  display: flex;
+  flex-direction: column;
+}
+
+.DiagramaIntegraciones__contenedor_integraciones {
+  display: grid;
+  flex: 1;
+  grid-template: repeat(3, auto) / repeat(4, 1fr);
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+.DiagramaIntegraciones__integracion {
+  height: 100%;
+  width: 100%;
+  border-radius: .25rem;
+  background-color: white;
+  box-shadow:
+    0 .25rem .15rem rgba(0, 0, 0, .15),
+    0 .25rem 1rem rgba(0, 0, 0, .15);
+  height: 2.5rem;
+}
+
+.DiagramaIntegraciones__division {
+  height: 5rem;
+  padding: 0 1.25rem;
+  position: relative;
+}
+
+.DiagramaIntegraciones__division_linea {
+  background-color: rgba(0, 0, 0, .1);
+  position: absolute;
+}
+
+.DiagramaIntegraciones__division_linea--horizontal {
+  height: 3px;
+  width: calc(100% - 2.5rem);
+  top: calc(10% - 1px);
+}
+
+.DiagramaIntegraciones__division_linea--vertical {
+  height: 100%;
+  width: 3px;
+  left: calc(50% - 1px);
+}
+
+.DiagramaIntegraciones__engranaje {
+  position: absolute;
+  width: 3rem;
+  color: gray;
+  left: calc(50% - .95rem);
+  border-radius: 50%;
+  top: calc(10% - 1rem);
+  font-size: 2rem;
+}
+
+.DiagramaIntegraciones__engranaje svg {
+  animation: gira-engranaje 10s linear infinite both;
+  transform-origin: 50% 50%;
+}
+
+.DiagramaIntegraciones__cero {
+  border-radius: .25rem;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+}
+
+.DiagramaIntegraciones__logo_cero {
+  background-color: white;
+  box-shadow:
+    0 .25rem .15rem rgba(0, 0, 0, .15),
+    0 .25rem 1rem rgba(0, 0, 0, .15);
+  height: 2.5rem;
+  border-radius: .25rem;
+}
+
+@keyframes gira-engranaje {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

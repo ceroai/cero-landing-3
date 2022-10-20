@@ -305,6 +305,12 @@
   top: -.15rem;
 }
 
+@media (max-width: 1800px) {
+  .Celular {
+    --u: .8vmin;
+  }
+}
+
 @media (max-width: 1600px) {
   .Celular {
     --u: .7vmin;

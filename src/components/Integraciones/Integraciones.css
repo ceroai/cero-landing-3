@@ -63,18 +63,6 @@
   background-color: gray;
 }
 
-@keyframes Superior__bg {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
-}
-
 @media (orientation: portrait) {
   .Integraciones__contenedor_grafica {
     display: none;
@@ -84,5 +72,9 @@
     grid-column: 1 / -1;
     place-self: center center;
     text-align: center;
+  }
+
+  .Integraciones__contenedor_botones {
+    justify-content: center;
   }
 }

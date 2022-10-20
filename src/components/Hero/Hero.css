@@ -10,7 +10,7 @@
   width: 100%;
   display: grid;
   grid-template: 1fr auto 15% / 1fr 1fr;
-  padding: 12rem 5rem 0 5rem;
+  padding: 10rem 5rem 0 5rem;
   color: black;
 }
 

@@ -10,13 +10,12 @@ const Integraciones = () => {
         </div>
         <div className="Integraciones__textos">
           <h3 className="Integraciones__subtitulo">
-            Trabajamos de la mano con tu centro <br />
-            e integrado a tus sistemas
+            Trabajamos de la mano con tu centro e integrados a tus sistemas
           </h3>
           <p>
-            Nos <strong>adaptamos a tus procesos</strong> de contactabilidad, <br />
-            y respetamos los horarios y flujos que tú ya sabes <br />
-            que funcionan, todo 100% integrado a tu actual <br />
+            Nos <strong>adaptamos a tus procesos</strong> de contactabilidad,
+            y respetamos los horarios y flujos que tú ya sabes
+            que funcionan, todo 100% integrado a tu actual
             sistema de agenda o CRM.
           </p>
           <div className="Integraciones__contenedor_botones">

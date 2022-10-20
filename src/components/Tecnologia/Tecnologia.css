@@ -9,23 +9,17 @@
   margin-top: 5rem;
 }
 
-.Tecnologia__titulo {
-  grid-column: 1 / -1;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
 .Tecnologia__textos {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   line-height: 1.35;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .Tecnologia__subtitulo {
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .Tecnologia__contenedor_botones {
@@ -45,6 +39,10 @@
 
 .Tecnologia__boton--secundario {
   background-color: gray;
+}
+
+.Tecnologia__contenedor_grafica {
+  place-self: stretch stretch;
 }
 
 @media (orientation: portrait) {

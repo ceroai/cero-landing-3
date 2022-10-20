@@ -31,17 +31,21 @@
   color: white;
 }
 
+.Integraciones__contenedor_grafica {
+  place-self: stretch stretch;
+}
+
 .Integraciones__textos {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   line-height: 1.35;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .Integraciones__subtitulo {
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .Integraciones__contenedor_botones {

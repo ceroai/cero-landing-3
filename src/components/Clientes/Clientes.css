@@ -1,8 +1,5 @@
 .Clientes {
   clip-path: polygon(0% 0%, 100% var(--int-padding), 100% calc(100% - var(--int-padding)), 0% 100%);
-  --color-rojo: #ed3324;
-  --color-azul: #005bf1;
-  --color-purpura: #a506e9;
   background: linear-gradient(
     45deg,
     var(--color-rojo) 0 25%,
@@ -63,8 +60,6 @@
 }
 
 @media (orientation: portrait) {
-  .Clientes {
-  }
 
   .Clientes__texto {
     max-width: 50%;

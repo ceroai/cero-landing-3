@@ -13,7 +13,7 @@
   height: 4rem;
   font-size: 2rem;
   box-shadow: 0 0 .3rem -.1rem rgba(0, 0, 0, .2);
-  padding: 0 5rem;
+  padding: 0 8rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -64,16 +64,7 @@
 
 @media (orientation: portrait) {
 
-  .BarraSuperior {
-  }
-
-  .BarraSuperior__logo {
-  }
-
   .BarraSuperior__navegacion_link {
     display: none;
-  }
-
-  .BarraSuperior__navegacion_boton {
   }
 }

@@ -1,8 +1,330 @@
 .Celular {
-  width: 22rem;
-  height: 40rem;
-  background-color: black;
+  --u: .8vmin;
+  color: var(--color-negro);
+  background: #F7F7F7;
+  border-radius: calc(5 * var(--u));
+  box-shadow:
+    0 0 0 calc(.7 * var(--u)) #2B292A,
+    calc(-.2 * var(--u)) calc(-.2 * var(--u)) 0 calc(.7 * var(--u)) #B0B0B0,
+    0 0 0 calc(1.4 * var(--u)) #656565;
+  font-family: 'Helvetica', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  height: calc(125 * var(--u));
+  width: calc(55 * var(--u));
+  max-height: 100vh;
   position: absolute;
-  border-radius: 2rem;
-  margin-left: 5rem;
+}
+
+.Celular::before {
+  content: '';
+  position: absolute;
+  width: calc(.5 * var(--u));
+  top: calc(15 * var(--u));
+  height: calc(10 * var(--u));
+  background: #444;
+  left: calc(-1.8 * var(--u));
+  border-radius: calc(1 * var(--u)) 0 0 calc(1 * var(--u));
+}
+
+.Celular::after {
+  content: '';
+  position: absolute;
+  width: calc(.6 * var(--u));
+  top: calc(8 * var(--u));
+  height: calc(7 * var(--u));
+  background: #333;
+  right: calc(-1.8 * var(--u));
+  border-radius: 0 calc(2 * var(--u)) calc(2 * var(--u)) 0;
+  box-shadow: 0 calc(9 * var(--u)) #333;
+}
+
+.Celular__solapa {
+  position: absolute;
+  --ancho: calc(20 * var(--u));
+  top: 0;
+  left: calc(calc(55 * var(--u)) / 2 - var(--ancho) / 2);
+  content: '';
+  width: var(--ancho);
+  height: calc(3.5 * var(--u));
+  background: #2B292A;
+  border-radius: 0 0 calc(10 * var(--u)) calc(10 * var(--u)) / 0 0 calc(20 * var(--u)) calc(20 * var(--u));
+}
+
+.Celular__solapa::before {
+  position: absolute;
+  content: '';
+  width: calc(.5 * var(--u));
+  height: calc(.5 * var(--u));
+  border-radius: 50%;
+  background: #5A5A5A;
+  left: calc(10.25 * var(--u));
+  top: calc(.3 * var(--u));
+}
+
+.Celular__solapa::after {
+  position: absolute;
+  content: '';
+  width: calc(10 * var(--u));
+  height: calc(.75 * var(--u));
+  border-radius: calc(2 * var(--u));
+  background: linear-gradient(#2C2C2C, #989898);
+  left: calc(5.5 * var(--u));
+  top: calc(1.5 * var(--u));
+}
+
+.Celular__barra_estado {
+  height: calc(5 * var(--u));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: calc(2 * var(--u));
+  padding: 0 calc(4 * var(--u));
+  font-weight: bold;
+  color: #2B292A;
+}
+
+.Celular__barra_estado_iconos {
+  display: grid;
+  grid-auto-flow: column;
+  gap: calc(1.5 * var(--u));
+}
+
+.Celular__barra_app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(7 * var(--u));
+  box-shadow: 0 calc(.1 * var(--u)) calc(.2 * var(--u)) rgba(0, 0, 0, .1);
+  z-index: 2;
+}
+
+.Celular__informacion_contacto {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.Celular__icono_volver {
+  font-size: calc(6 * var(--u));
+  margin-left: -.25rem;
+  color: #44a2ff;
+}
+
+.Celular__avatar {
+  background: linear-gradient(
+    45deg,
+    var(--color-rojo) 0 25%,
+    var(--color-azul),
+    var(--color-purpura) 75%
+  );
+  background-size: 1000% 1000%;
+  animation: Superior___bg 10s ease-in-out infinite;
+  width: calc(5 * var(--u));
+  height: calc(5 * var(--u));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Celular__imagen_avatar {
+  width: calc(3.75 * var(--u));
+  min-height: calc(3.75 * var(--u));
+  filter: invert();
+}
+
+.Celular__contacto {
+  display: grid;
+  gap: calc(.6 * var(--u));
+  padding-left: calc(1.5 * var(--u));
+}
+
+.Celular__nombre_contacto {
+  font-size: calc(2.25 * var(--u));
+  font-weight: bold;
+  position: relative;
+}
+
+.Celular__estado_contacto {
+  font-size: calc(1.8 * var(--u));
+  color: gray;
+}
+
+.Celular__iconos_barra_app {
+  display: grid;
+  grid-auto-flow: column;
+  gap: calc(3 * var(--u));
+  padding-right: calc(3 * var(--u));
+  color: #44a2ff;
+  font-size: calc(3 * var(--u));
+}
+
+.Celular__pantalla {
+  flex: 1;
+  background: linear-gradient(
+      45deg,
+      #ed332425 0 25%,
+      #005bf125,
+      #a506e925 75%
+    ), white;
+  background-size: 500% 100%;
+  animation: Superior___bg 10s ease infinite;
+  border-radius: 0 0 calc(5 * var(--u)) calc(5 * var(--u));
+  display: flex;
+  padding: calc(1.5 * var(--u)) calc(2 * var(--u));
+  flex-direction: column;
+  gap: calc(1.5 * var(--u));
+  position: relative;
+}
+
+.Celular__mensaje {
+  max-width: 66%;
+  padding: calc(1.15 * var(--u));
+  border-radius: calc(.5 * var(--u));
+  font-size: calc(2.25 * var(--u));
+  line-height: 1.25;
+  margin-bottom: .75vh;
+  position: relative;
+  filter: drop-shadow(0 .1rem .15rem rgba(0, 0, 0, .1));
+}
+
+.Celular__mensaje--saliente::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: calc(.25 * var(--u));
+  top: calc(.75 * var(--u));
+}
+
+.Celular__mensaje--entrante::before {
+  content: '';
+  position: absolute;
+  width: calc(2 * var(--u));
+  height: calc(2 * var(--u));
+  left: calc(-1.5 * var(--u));
+  top: 0;
+  background: white;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+}
+
+.Celular__mensaje--entrante {
+  transform-origin: 0% 0%;
+  background: white;
+  align-self: flex-start;
+  transform-origin: 0% 0%;
+  animation: aparece-mensaje-entrante-slidecelular .25s ease both;
+}
+
+.Celular__mensaje--entrante::before {
+  content: '';
+  position: absolute;
+  width: calc(2 * var(--u));
+  height: calc(2 * var(--u));
+  left: calc(-1.5 * var(--u));
+  top: 0;
+  background: inherit;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+}
+
+.Celular__mensaje--saliente {
+  transform-origin: 100% 0%;
+  background: #dcf8c7;
+  align-self: flex-end;
+  transform-origin: 100% 0%;
+  animation: aparece-mensaje-saliente-slidecelular .25s ease both;
+}
+
+.Celular__mensaje--saliente::before {
+  content: '';
+  position: absolute;
+  width: calc(2 * var(--u));
+  height: calc(2 * var(--u));
+  left: calc(100% - calc(.5 * var(--u)));
+  top: 0;
+  background: inherit;
+  clip-path: polygon(100% 0%, 0% 100%, 0% 0%);
+}
+
+.Celular strong {
+  font-weight: bold;
+}
+
+.Celular__deteccion {
+  position: absolute;
+  height: calc(100% + calc(.5 * var(--u)));
+  top: 0;
+  padding-left: 100%;
+  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  min-width: 20rem;
+}
+
+.Celular__etiqueta_deteccion {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: calc(2.5 * var(--u));
+  display: flex;
+  align-items: center;
+  min-width: 20rem;
+}
+
+.Celular__etiqueta_deteccion--corta {
+  display: none;
+}
+
+.Celular__respuesta_deteccion {
+  font-size: calc(2 * var(--u));
+  text-transform: none;
+  margin-left: 2rem;
+}
+
+.Celular__icono_no {
+  color: var(--color-rojo);
+  margin-right: .5rem;
+  font-size: 1.5rem;
+  width: 1.5rem;
+}
+
+.Celular__icono_si {
+  color: var(--color-verde);
+  margin-right: .5rem;
+  font-size: 1.5rem;
+  width: 1.5rem;
+}
+
+.Celular__icono_verificado {
+  color: var(--color-verde);
+  font-size: 1.5rem;
+  position: absolute;
+  left: calc(100% + .35rem);
+  top: -.15rem;
+}
+
+@media (max-width: 1600px) {
+  .Celular {
+    --u: .7vmin;
+  }
+}
+
+@media (max-width: 1400px) {
+  .Celular {
+    --u: .6vmin;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Celular {
+    --u: .5vmin;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Celular {
+    --u: .4vmin;
+  }
 }

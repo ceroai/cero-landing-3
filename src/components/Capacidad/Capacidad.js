@@ -7,7 +7,7 @@ const Capacidad = () => {
       <h2 className="Capacidad__titulo">Tu Centro Médico a máxima capacidad</h2>
       <div className="Capacidad__textos">
         <h3 className="Capacidad__subtitulo">
-          Comunicación automática y efectiva
+          Comunicación automática y efectiva <br />
           con todos tus pacientes
         </h3>
         <p>

@@ -1,10 +1,9 @@
 .Tecnologia {
-  max-width: 1500px;
   width: 100%;
   display: grid;
   grid-template: auto 1fr / 1fr 1fr;
   place-items: center center;
-  padding: 3rem 5rem;
+  padding: 3rem 8rem;
   gap: 5rem;
   margin-top: 5rem;
 }
@@ -34,7 +33,7 @@
   padding: .75rem 1.5rem;
   border-radius: .35rem;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .Tecnologia__boton--secundario {

@@ -6,7 +6,8 @@ const Tecnologia = () => {
     <div className="Tecnologia">
       <div className="Tecnologia__textos">
         <h3 className="Tecnologia__subtitulo">
-          Tecnología de punta para escalar tu operación
+          Tecnología de punta<br />
+          para escalar tu operación
         </h3>
         <p>
           Coordinamos <strong>más de 1.000.000 de citas</strong> al mes

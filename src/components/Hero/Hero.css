@@ -6,11 +6,10 @@
 }
 
 .Hero {
-  max-width: 1500px;
   width: 100%;
   display: grid;
   grid-template: 1fr auto 15% / 1fr 1fr;
-  padding: 10rem 5rem 0 5rem;
+  padding: 10rem 8rem 0 8rem;
   color: black;
 }
 
@@ -20,9 +19,4 @@
 
 .Hero__logos {
   grid-column: span 2;
-}
-
-@media (orientation: portrait) {
-  .Hero {
-  }
 }

@@ -18,6 +18,8 @@ import logoKopland from '../../../assets/images/integraciones/kopland.svg'
 import logoMasterKey from '../../../assets/images/integraciones/masterkey.svg'
 import logoSalutem from '../../../assets/images/integraciones/salutem.svg'
 import logoActiveCampaign from '../../../assets/images/integraciones/active-campaign.svg'
+import { useMemo } from 'react'
+import _ from 'lodash'
 
 const integraciones = [
   {
@@ -88,10 +90,12 @@ const integraciones = [
 
 const DiagramaIntegraciones = () => {
 
+  const integracionesRevueltas = useMemo(() => _.shuffle(integraciones), [])
+
   return (
     <div className="DiagramaIntegraciones">
       <div className="DiagramaIntegraciones__contenedor_integraciones">
-        {integraciones.map(integracion => (
+        {integracionesRevueltas.map(integracion => (
           <div
             key={integracion.nombre}
             className="DiagramaIntegraciones__integracion"

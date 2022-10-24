@@ -2,7 +2,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
   background-color: lightgray;
   --int-padding: 8rem;
   padding: var(--int-padding) 0;

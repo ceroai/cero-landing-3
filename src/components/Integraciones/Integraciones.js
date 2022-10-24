@@ -1,31 +1,44 @@
-import DiagramaIntegraciones from './DiagramaIntegraciones/DiagramaIntegraciones'
+import { useState } from 'react'
+import BuscadorIntegraciones from './BuscadorIntegraciones'
+import DiagramaIntegraciones from './DiagramaIntegraciones'
 import './Integraciones.css'
 
 const Integraciones = () => {
+
+  const [buscadorActivo, setBuscadorActivo] = useState(false)
+
   return (
-    <div className="Integraciones__fondo">
-      <div className="Integraciones">
-        <div className="Integraciones__contenedor_grafica">
-          <DiagramaIntegraciones />
-        </div>
-        <div className="Integraciones__textos">
-          <h3 className="Integraciones__subtitulo">
-            Trabajamos de la mano con tu centro
-            e integrados a tus sistemas
-          </h3>
-          <p>
-            Nos <strong>adaptamos a tus procesos</strong> de contactabilidad,
-            y respetamos los horarios y flujos que tú ya sabes
-            que funcionan, todo 100% integrado a tu actual
-            sistema de agenda o CRM.
-          </p>
-          <div className="Integraciones__contenedor_botones">
-            <button className="Integraciones__boton Integraciones__boton--secundario">Ver integraciones</button>
-            <button className="Integraciones__boton">Pruébalo ahora</button>
+    <>
+      {buscadorActivo && <BuscadorIntegraciones cerrar={() => setBuscadorActivo(false)} />}
+      <div className="Integraciones__fondo">
+        <div className="Integraciones">
+          <div className="Integraciones__contenedor_grafica">
+            <DiagramaIntegraciones />
+          </div>
+          <div className="Integraciones__textos">
+            <h3 className="Integraciones__subtitulo">
+              Trabajamos de la mano con tu centro
+              e integrados a tus sistemas
+            </h3>
+            <p>
+              Nos <strong>adaptamos a tus procesos</strong> de contactabilidad,
+              y respetamos los horarios y flujos que tú ya sabes
+              que funcionan, todo 100% integrado a tu actual
+              sistema de agenda o CRM.
+            </p>
+            <div className="Integraciones__contenedor_botones">
+              <button
+                className="Integraciones__boton Integraciones__boton--secundario"
+                onClick={() => setBuscadorActivo(true)}
+              >
+                  Ver integraciones
+              </button>
+              <button className="Integraciones__boton">Pruébalo ahora</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

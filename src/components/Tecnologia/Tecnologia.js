@@ -1,7 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import DiagramaTecnologia from './DiagramaTecnologia'
 import './Tecnologia.css'
 
 const Tecnologia = () => {
+
+  const navigate = useNavigate()
+
   return (
     <div className="Tecnologia">
       <div className="Tecnologia__textos">
@@ -16,7 +20,7 @@ const Tecnologia = () => {
           reagendar y haciendo tu operación más eficiente. 
         </p>
         <div className="Tecnologia__contenedor_botones">
-          <button className="Tecnologia__boton">Pide tu prueba gratis</button>
+          <button className="Tecnologia__boton" onClick={() => navigate('/contacto')}>Pide tu prueba gratis</button>
         </div>
       </div>
       <div className="Tecnologia__contenedor_grafica">

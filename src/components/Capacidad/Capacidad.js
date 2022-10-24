@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Capacidad.css'
 import CasosDeUso from './CasosDeUso'
 import Celular from './Celular'
@@ -6,6 +7,8 @@ import Celular from './Celular'
 const Capacidad = () => {
 
   const [casosDeUsoVisibles, setCasosDeUsoVisibles] = useState(false)
+
+  const navigate = useNavigate()
 
   return (
     <>
@@ -29,6 +32,7 @@ const Capacidad = () => {
             </button>
             <button
               className="Capacidad__boton"
+              onClick={() => navigate('/contacto')}
             >
               Pruébalo ahora
             </button>

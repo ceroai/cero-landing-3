@@ -12,12 +12,13 @@ const CasosDeUso = ({ cerrar }) => {
         className="CasosDeUso"
         onClick={e => e.stopPropagation()}
       >
-        <button
+        {/* <button
           className="CasosDeUso__boton_cerrar"
           onClick={cerrar}
         >
           <InlineIcon icon="mdi:close" />
-        </button>
+        </button> */}
+        <iframe src="https://cero.ai/expo" style={{ width: '100%', height: '100%' }} />
       </div>
     </div>
     

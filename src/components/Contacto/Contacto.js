@@ -1,20 +1,24 @@
 import _ from 'lodash'
+import { useEffect, useRef } from 'react'
 import integraciones from '../../data/integraciones'
 import './Contacto.css'
 
 const Contacto = () => {
+
+  const nombreRef = useRef()
+
+  useEffect(() => nombreRef.current?.focus(), [])
+
   return (
     <div className="Contacto">
       <div className="Contacto__contenedor_central">
         <div className="Contacto__contenedor_texto">
-          <h1 className="Contacto__titulo">Prueba</h1>
+          <h1 className="Contacto__titulo">Contáctanos</h1>
           <p className="Contacto__bajada">
-            Danos 30 minutos para mostrarte
-            como podemos ayudarte a solucionar
-            tu proceso de confirmación de pacientes.
-            Nuestros clientes ahorran miles de horas
-            de coordinación y aumentan sus ingresos
-            disminuyendo el No Show de pacientes.
+            Prueba nuestro servicio <strong>gratis</strong> y verás cómo
+            aumentan tus ingresos ahorrando miles de horas de coordinación,
+            disminuyendo el No Show y aumentando la cantidad de pacientes
+            que puedes atender. Déjanos tus datos y te contactaremos.
           </p>
         </div>
         <div className="Contacto__contenedor_formulario">
@@ -25,6 +29,7 @@ const Contacto = () => {
                 type="text"
                 required
                 className="Contacto__input"
+                ref={nombreRef}
               />
             </div>
             <div className="Contacto__campo">

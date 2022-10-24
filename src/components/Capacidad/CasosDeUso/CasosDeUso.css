@@ -20,11 +20,11 @@
   right: 5rem;
   bottom: 5rem;
   border-radius: 1rem;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  clip-path: inset(0% 0% 0% 0% round 10px);
 }
 
 .CasosDeUso__boton_cerrar {

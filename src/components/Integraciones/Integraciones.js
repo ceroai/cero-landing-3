@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import BuscadorIntegraciones from './BuscadorIntegraciones'
 import DiagramaIntegraciones from './DiagramaIntegraciones'
 import './Integraciones.css'
@@ -6,6 +7,8 @@ import './Integraciones.css'
 const Integraciones = () => {
 
   const [buscadorActivo, setBuscadorActivo] = useState(false)
+
+  const navigate = useNavigate()
 
   return (
     <>
@@ -33,7 +36,7 @@ const Integraciones = () => {
               >
                   Ver integraciones
               </button>
-              <button className="Integraciones__boton">Pruébalo ahora</button>
+              <button className="Integraciones__boton" onClick={() => navigate('/contacto')}>Pruébalo ahora</button>
             </div>
           </div>
         </div>

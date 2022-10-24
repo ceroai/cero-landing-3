@@ -10,7 +10,7 @@ const Integraciones = () => {
         </div>
         <div className="Integraciones__textos">
           <h3 className="Integraciones__subtitulo">
-            Trabajamos de la mano con tu centro <br />
+            Trabajamos de la mano con tu centro
             e integrados a tus sistemas
           </h3>
           <p>

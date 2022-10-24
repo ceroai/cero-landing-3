@@ -68,13 +68,24 @@
     display: none;
   }
 
+  .Integraciones__subtitulo {
+    font-size: 2.5rem;
+  }
+
   .Integraciones__textos {
     grid-column: 1 / -1;
     place-self: center center;
     text-align: center;
+    font-size: 2rem;
   }
 
   .Integraciones__contenedor_botones {
-    justify-content: center;
+    flex-direction: column;
+  }
+
+  .Integraciones__boton {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 1.5rem;
   }
 }

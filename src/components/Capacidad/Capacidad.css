@@ -53,15 +53,28 @@
 
   .Capacidad__titulo {
     text-align: center;
+    font-size: 3rem;
+  }
+
+  .Capacidad__subtitulo {
+    font-size: 2rem;
   }
 
   .Capacidad__textos {
     grid-column: 1 / -1;
     place-self: center center;
     text-align: center;
+    font-size: 2rem;
   }
 
   .Capacidad__contenedor_botones {
     justify-content: center;
+    flex-direction: column;
+  }
+
+  .Capacidad__boton {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 1.5rem;
   }
 }

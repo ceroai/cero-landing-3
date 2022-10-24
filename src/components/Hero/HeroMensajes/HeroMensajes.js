@@ -13,8 +13,8 @@ const HeroMensajes = () => {
         Menos Horas Perdidas
       </h1>
       <p className="HeroMensajes__bajada">
-        En <img src={logo} className="HeroMensajes__logo" alt="Logo CERO" /> nos encargamos de que <br />
-        todos tus pacientes lleguen a sus citas <br />
+        En <img src={logo} className="HeroMensajes__logo" alt="Logo CERO" /> nos encargamos de que
+        todos tus pacientes lleguen a sus citas
         a la hora 🕐 y preparados 💊
       </p>
       <button

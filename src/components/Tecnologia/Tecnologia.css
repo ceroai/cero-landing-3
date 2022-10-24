@@ -49,13 +49,24 @@
     display: none;
   }
 
+  .Tecnologia__subtitulo {
+    font-size: 2.5rem;
+  }
+
   .Tecnologia__textos {
     grid-column: 1 / -1;
     place-self: center center;
     text-align: center;
+    font-size: 2rem;
   }
 
   .Tecnologia__contenedor_botones {
-    justify-content: center;
+    flex-direction: column;
+  }
+
+  .Tecnologia__boton {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 1.5rem;
   }
 }

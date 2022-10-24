@@ -7,6 +7,7 @@ import Contacto from '../Contacto'
 import Hero from '../Hero'
 import Integraciones from '../Integraciones'
 import Tecnologia from '../Tecnologia'
+import Testimonios from '../Testimonios'
 import './App.css'
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
             <Capacidad />
             <Integraciones />
             <Tecnologia />
+            <Testimonios />
             <Apoyo />
           </>
         } />

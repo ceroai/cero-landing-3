@@ -1,0 +1,59 @@
+.Testimonios {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 8rem;
+  gap: 5rem;
+  margin-top: 5rem;
+  position: relative;
+}
+
+.Testimonios__icono_cita {
+  position: absolute;
+  color: rgb(240, 240, 240);
+  font-size: 15rem;
+  z-index: -1;
+}
+
+.Testimonios__textos {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.Testimonios__subtitulo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.Testimonios__contenedor_cita {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: .25rem;
+}
+
+.Testimonios__cita {
+  grid-column: 1 / -1;
+  margin-bottom: 1rem;
+  max-width: 30ch;
+}
+
+.Testimonios__avatar {
+  width: 4rem;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  grid-row: span 2;
+}
+
+.Testimonios__nombre {
+  font-size: 1rem;
+}
+
+.Testimonios__cargo {
+  font-size: 1rem;
+}

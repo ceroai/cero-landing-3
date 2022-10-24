@@ -1,3 +1,5 @@
+import _ from 'lodash'
+import integraciones from '../../data/integraciones'
 import './Contacto.css'
 
 const Contacto = () => {
@@ -43,9 +45,16 @@ const Contacto = () => {
             </div>
             <div className="Contacto__campo">
               <label className="Contacto__label_campo">Software de agenda</label>
-              <select className="Contacto__select" required>
-                <option>Dentalink</option>
-                <option>Medilink</option>
+              <select
+                className="Contacto__select"
+                required
+              >
+                {_.sortBy(integraciones, 'nombre').map(integracion => (
+                  <option value={integracion.nombre}>
+                    {integracion.nombre}
+                  </option>
+                ))}
+                <option>Otro</option>
               </select>
             </div>
             <button

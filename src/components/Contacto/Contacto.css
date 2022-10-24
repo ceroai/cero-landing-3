@@ -58,6 +58,7 @@
   padding: 1rem;
   border-radius: .25rem;
   border: 1px solid lightgray;
+  font-size: .8rem;
 }
 
 .Contacto__label_campo {
@@ -68,6 +69,7 @@
 .Contacto__select {
   padding: 1rem;
   border-radius: .25rem;
+  font-size: .8rem;
   border: 1px solid lightgray;
 }
 

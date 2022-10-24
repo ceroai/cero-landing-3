@@ -17,13 +17,20 @@ const BarraSuperior = () => {
           onClick={() => navigate('/')}
         />
         <nav className="BarraSuperior__navegacion">
-          <button className="BarraSuperior__navegacion_link">
+          <button
+            className="BarraSuperior__navegacion_link"
+          >
             Casos de uso
           </button>
-          <button className="BarraSuperior__navegacion_link">
+          <button
+            className="BarraSuperior__navegacion_link"
+          >
             Integraciones
           </button>
-          <button className="BarraSuperior__navegacion_boton">
+          <button
+            className="BarraSuperior__navegacion_boton"
+            onClick={() => navigate('/contacto')}
+          >
             Pruébalo ahora
           </button>
         </nav>

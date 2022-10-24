@@ -20,9 +20,6 @@
 }
 
 .BarraSuperior__barrita {
-  --color-rojo: #ed3324;
-  --color-azul: #005bf1;
-  --color-purpura: #a506e9;
   background: linear-gradient(
     45deg,
     var(--color-rojo) 0 25%,
@@ -64,7 +61,25 @@
 
 @media (orientation: portrait) {
 
+  .BarraSuperior {
+    height: 8rem;
+    padding: 0 3rem;
+  }
+
+  .BarraSuperior__logo {
+    width: 9.25rem;
+  }
+
+  .BarraSuperior__barrita {
+    height: 1rem;
+  }
+
   .BarraSuperior__navegacion_link {
     display: none;
+  }
+
+  .BarraSuperior__navegacion_boton {
+    font-size: 2rem;
+    padding: 1.5rem 2.5rem;
   }
 }

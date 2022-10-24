@@ -54,9 +54,6 @@ const Contacto = () => {
             >
               Enviar
             </button>
-            <p className="Contacto__disclaimer">
-              No compartiremos tu información
-            </p>
           </form>
         </div>
       </div>

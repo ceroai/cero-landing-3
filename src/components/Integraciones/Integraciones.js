@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { esconderIntegraciones } from '../../redux/ducks/modals'
+import { mostrarIntegraciones } from '../../redux/ducks/modals'
 import BuscadorIntegraciones from './BuscadorIntegraciones'
 import DiagramaIntegraciones from './DiagramaIntegraciones'
 import './Integraciones.css'
@@ -33,7 +33,7 @@ const Integraciones = () => {
             <div className="Integraciones__contenedor_botones">
               <button
                 className="Integraciones__boton Integraciones__boton--secundario"
-                onClick={() => dispatch(esconderIntegraciones())}
+                onClick={() => dispatch(mostrarIntegraciones())}
               >
                   Ver integraciones
               </button>

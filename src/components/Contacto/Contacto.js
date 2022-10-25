@@ -1,13 +1,43 @@
+import axios from 'axios'
 import _ from 'lodash'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import integraciones from '../../data/integraciones'
 import './Contacto.css'
 
 const Contacto = () => {
 
   const nombreRef = useRef()
+  const [nombre, setNombre] = useState('')
+  const [seudonimo, setSeudonimo] = useState('')
+  const [telefono, setTelefono] = useState('')
+  const [email, setEmail] = useState('')
+  const [organizacion, setOrganizacion] = useState('')
+  const [software, setSoftware] = useState('')
 
   useEffect(() => nombreRef.current?.focus(), [])
+
+  const contactar = e => {
+    e.preventDefault()
+    const params = new URLSearchParams()
+    params.append('nombre', nombre)
+    params.append('telefono', telefono)
+    params.append('email', email)
+    params.append('seudonimo', seudonimo)
+    params.append('nombre_organizacion', organizacion)
+    params.append('software', software)
+    params.append('form-name', 'contactoCero')
+    params.append('subject', 'Contacto a través de Cero.ai')
+    axios.post('/',
+      params,
+      { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
+    ).then(() => {
+      // setMailEnviado(true)
+      // setEnviando(false)
+    }).catch(() => {
+      // setMailEnviado(false)
+      // setEnviando(false)
+    })
+  }
 
   return (
     <div className="Contacto">
@@ -22,7 +52,10 @@ const Contacto = () => {
           </p>
         </div>
         <div className="Contacto__contenedor_formulario">
-          <form className="Contacto__formulario">
+          <form
+            className="Contacto__formulario"
+            onSubmit={contactar}
+          >
             <div className="Contacto__campo">
               <label className="Contacto__label_campo">Nombre</label>
               <input
@@ -30,6 +63,18 @@ const Contacto = () => {
                 required
                 className="Contacto__input"
                 ref={nombreRef}
+                value={nombre}
+                onChange={e => setNombre(e.target.value)}
+              />
+            </div>
+            <div className="Contacto__campo" style={{ display: 'none' }}>
+              <label className="Contacto__label_campo">Seudónimo</label>
+              <input
+                type="text"
+                required
+                className="Contacto__input"
+                value={seudonimo}
+                onChange={e => setSeudonimo(e.target.value)}
               />
             </div>
             <div className="Contacto__campo">
@@ -38,6 +83,8 @@ const Contacto = () => {
                 type="email"
                 required
                 className="Contacto__input"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
               />
             </div>
             <div className="Contacto__campo">
@@ -46,6 +93,18 @@ const Contacto = () => {
                 type="text"
                 required
                 className="Contacto__input"
+                value={telefono}
+                onChange={e => setTelefono(e.target.value)}
+              />
+            </div>
+            <div className="Contacto__campo">
+              <label className="Contacto__label_campo">Organización</label>
+              <input
+                type="text"
+                required
+                className="Contacto__input"
+                value={organizacion}
+                onChange={e => setOrganizacion(e.target.value)}
               />
             </div>
             <div className="Contacto__campo">
@@ -53,6 +112,8 @@ const Contacto = () => {
               <select
                 className="Contacto__select"
                 required
+                value={software}
+                onChange={e => setSoftware(e.target.value)}
               >
                 {_.sortBy(integraciones, 'nombre').map(integracion => (
                   <option value={integracion.nombre}>

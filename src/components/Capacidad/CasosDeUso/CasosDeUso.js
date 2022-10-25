@@ -1,4 +1,3 @@
-import { InlineIcon } from '@iconify/react'
 import './CasosDeUso.css'
 
 const CasosDeUso = ({ cerrar }) => {

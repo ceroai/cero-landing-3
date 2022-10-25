@@ -17,13 +17,14 @@ const Contacto = () => {
   useEffect(() => nombreRef.current?.focus(), [])
 
   const contactar = e => {
+    console.log('x')
     e.preventDefault()
     const params = new URLSearchParams()
     params.append('nombre', nombre)
     params.append('telefono', telefono)
     params.append('email', email)
     params.append('seudonimo', seudonimo)
-    params.append('nombre_organizacion', organizacion)
+    params.append('organizacion', organizacion)
     params.append('software', software)
     params.append('form-name', 'contactoCero')
     params.append('subject', 'Contacto a través de Cero.ai')
@@ -71,7 +72,6 @@ const Contacto = () => {
               <label className="Contacto__label_campo">Seudónimo</label>
               <input
                 type="text"
-                required
                 className="Contacto__input"
                 value={seudonimo}
                 onChange={e => setSeudonimo(e.target.value)}
@@ -116,7 +116,7 @@ const Contacto = () => {
                 onChange={e => setSoftware(e.target.value)}
               >
                 {_.sortBy(integraciones, 'nombre').map(integracion => (
-                  <option value={integracion.nombre}>
+                  <option key={`option-${integracion.nombre}`} value={integracion.nombre}>
                     {integracion.nombre}
                   </option>
                 ))}

@@ -1,23 +1,21 @@
+import { useDispatch } from 'react-redux'
+import { esconderCasosDeUso } from '../../../redux/ducks/modals'
 import './CasosDeUso.css'
 
-const CasosDeUso = ({ cerrar }) => {
+const CasosDeUso = () => {
+
+  const dispatch = useDispatch()
 
   return (
     <div
       className="CasosDeUso__overlay" 
-      onClick={cerrar}
+      onClick={() => dispatch(esconderCasosDeUso())}
     >
       <div
         className="CasosDeUso"
         onClick={e => e.stopPropagation()}
       >
-        {/* <button
-          className="CasosDeUso__boton_cerrar"
-          onClick={cerrar}
-        >
-          <InlineIcon icon="mdi:close" />
-        </button> */}
-        <iframe src="https://cero.ai/expo" style={{ width: '100%', height: '100%' }} />
+        <iframe src="" style={{ width: '100%', height: '100%' }} title="Expo" />
       </div>
     </div>
     

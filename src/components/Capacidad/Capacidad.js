@@ -1,18 +1,19 @@
-import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { mostrarCasosDeUso } from '../../redux/ducks/modals'
 import './Capacidad.css'
 import CasosDeUso from './CasosDeUso'
 import Celular from './Celular'
 
 const Capacidad = () => {
 
-  const [casosDeUsoVisibles, setCasosDeUsoVisibles] = useState(false)
-
+  const { casosDeUsoVisibles } = useSelector(state => state.modals)
+  const dispatch = useDispatch()
   const navigate = useNavigate()
 
   return (
     <>
-      {casosDeUsoVisibles && <CasosDeUso cerrar={() => setCasosDeUsoVisibles(false)} />}
+      {casosDeUsoVisibles && <CasosDeUso />}
       <div className="Capacidad">
         <h2 className="Capacidad__titulo">Tu Centro Médico a máxima capacidad</h2>
         <div className="Capacidad__textos">
@@ -26,7 +27,7 @@ const Capacidad = () => {
           <div className="Capacidad__contenedor_botones">
             <button
               className="Capacidad__boton Capacidad__boton--secundario"
-              onClick={() => setCasosDeUsoVisibles(true)}
+              onClick={() => dispatch(mostrarCasosDeUso())}
             >
               Ver casos de uso
             </button>

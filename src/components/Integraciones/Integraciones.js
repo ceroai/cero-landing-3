@@ -1,18 +1,19 @@
-import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { esconderIntegraciones } from '../../redux/ducks/modals'
 import BuscadorIntegraciones from './BuscadorIntegraciones'
 import DiagramaIntegraciones from './DiagramaIntegraciones'
 import './Integraciones.css'
 
 const Integraciones = () => {
 
-  const [buscadorActivo, setBuscadorActivo] = useState(false)
-
+  const { integracionesVisibles } = useSelector(state => state.modals)
+  const dispatch = useDispatch()
   const navigate = useNavigate()
 
   return (
     <>
-      {buscadorActivo && <BuscadorIntegraciones cerrar={() => setBuscadorActivo(false)} />}
+      {integracionesVisibles && <BuscadorIntegraciones  />}
       <div className="Integraciones__fondo">
         <div className="Integraciones">
           <div className="Integraciones__contenedor_grafica">
@@ -32,7 +33,7 @@ const Integraciones = () => {
             <div className="Integraciones__contenedor_botones">
               <button
                 className="Integraciones__boton Integraciones__boton--secundario"
-                onClick={() => setBuscadorActivo(true)}
+                onClick={() => dispatch(esconderIntegraciones())}
               >
                   Ver integraciones
               </button>

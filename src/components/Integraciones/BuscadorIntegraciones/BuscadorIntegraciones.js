@@ -1,13 +1,16 @@
 import { InlineIcon } from '@iconify/react'
 import { useEffect, useRef, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import integraciones from '../../../data/integraciones'
+import { esconderIntegraciones } from '../../../redux/ducks/modals'
 import './BuscadorIntegraciones.css'
 
-const BuscadorIntegraciones = ({ cerrar }) => {
+const BuscadorIntegraciones = () => {
 
   const [busqueda, setBusqueda] = useState('')
   const inputRef = useRef()
+  const dispatch = useDispatch()
 
   useEffect(() => inputRef.current?.focus(), [])
 
@@ -18,7 +21,7 @@ const BuscadorIntegraciones = ({ cerrar }) => {
   return (
     <div
       className="BuscadorIntegraciones__overlay" 
-      onClick={cerrar}
+      onClick={() => dispatch(esconderIntegraciones())}
     >
       <div
         className="BuscadorIntegraciones"
@@ -26,7 +29,7 @@ const BuscadorIntegraciones = ({ cerrar }) => {
       >
         <button
           className="BuscadorIntegraciones__boton_cerrar"
-          onClick={cerrar}
+          onClick={() => dispatch(esconderIntegraciones())}
         >
           <InlineIcon icon="mdi:close" />
         </button>

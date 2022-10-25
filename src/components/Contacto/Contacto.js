@@ -17,7 +17,6 @@ const Contacto = () => {
   useEffect(() => nombreRef.current?.focus(), [])
 
   const contactar = e => {
-    console.log('x')
     e.preventDefault()
     const params = new URLSearchParams()
     params.append('nombre', nombre)

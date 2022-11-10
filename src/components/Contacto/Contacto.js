@@ -45,11 +45,13 @@ const Contacto = () => {
     <div className="Contacto">
       <div className="Contacto__contenedor_central">
         {mailEnviado && (
-          <div className="Contacto__mensaje_enviado">
-            <h1>¡Gracias!</h1>
-            <p>Recibimos tu información</p>
-            <p>Pronto nos pondremos en contacto contigo</p>
-            <button onClick={() => setMailEnviado(false)}>Aceptar</button>
+          <div className="Contacto__contenedor_mensaje_enviado">
+            <div className="Contacto__mensaje_enviado">
+              <h1>¡Gracias!</h1>
+              <p>Recibimos tu información</p>
+              <p>Pronto nos pondremos en contacto contigo</p>
+              <button className="Contacto__boton" onClick={() => setMailEnviado(false)}>Aceptar</button>
+            </div>
           </div>
         )}
         <div className="Contacto__contenedor_texto">
@@ -135,8 +137,9 @@ const Contacto = () => {
             <button
               type="submit"
               className="Contacto__boton"
+              disabled={enviando}
             >
-              Enviar
+              {enviando ? 'Enviando...' : 'Enviar'}
             </button>
           </form>
         </div>

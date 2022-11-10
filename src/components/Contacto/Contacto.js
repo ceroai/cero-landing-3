@@ -13,6 +13,8 @@ const Contacto = () => {
   const [email, setEmail] = useState('')
   const [organizacion, setOrganizacion] = useState('')
   const [software, setSoftware] = useState('')
+  const [mailEnviado, setMailEnviado] = useState(false)
+  const [enviando, setEnviando] = useState(false)
 
   useEffect(() => nombreRef.current?.focus(), [])
 
@@ -31,17 +33,25 @@ const Contacto = () => {
       params,
       { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
     ).then(() => {
-      // setMailEnviado(true)
-      // setEnviando(false)
+      setMailEnviado(true)
+      setEnviando(false)
     }).catch(() => {
-      // setMailEnviado(false)
-      // setEnviando(false)
+      setMailEnviado(false)
+      setEnviando(false)
     })
   }
 
   return (
     <div className="Contacto">
       <div className="Contacto__contenedor_central">
+        {mailEnviado && (
+          <div className="Contacto__mensaje_enviado">
+            <h1>¡Gracias!</h1>
+            <p>Recibimos tu información</p>
+            <p>Pronto nos pondremos en contacto contigo</p>
+            <button onClick={() => setMailEnviado(false)}>Aceptar</button>
+          </div>
+        )}
         <div className="Contacto__contenedor_texto">
           <h1 className="Contacto__titulo">Contáctanos</h1>
           <p className="Contacto__bajada">

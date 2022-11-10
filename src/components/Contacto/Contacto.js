@@ -47,7 +47,7 @@ const Contacto = () => {
         {mailEnviado && (
           <div className="Contacto__contenedor_mensaje_enviado">
             <div className="Contacto__mensaje_enviado">
-              <h1>¡Gracias!</h1>
+              <h1 className="Contacto__mensaje_enviado_titulo">¡Gracias!</h1>
               <p>Recibimos tu información</p>
               <p>Pronto nos pondremos en contacto contigo</p>
               <button className="Contacto__boton" onClick={() => setMailEnviado(false)}>Aceptar</button>

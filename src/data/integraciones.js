@@ -14,6 +14,8 @@ import logoKopland from '../assets/images/integraciones/kopland.svg'
 import logoMasterKey from '../assets/images/integraciones/masterkey.svg'
 import logoSalutem from '../assets/images/integraciones/salutem.svg'
 import logoActiveCampaign from '../assets/images/integraciones/active-campaign.svg'
+import logoSked24 from '../assets/images/integraciones/sked24.svg'
+import logoNaturalSoft from '../assets/images/integraciones/naturalsoft.svg'
 
 const integraciones = [
   {
@@ -79,7 +81,15 @@ const integraciones = [
   {
     nombre: 'ActiveCampaign',
     logo: logoActiveCampaign
-  }
+  },
+  {
+    nombre: 'Sked24',
+    logo: logoSked24
+  },
+  {
+    nombre: 'NaturalSoft',
+    logo: logoNaturalSoft
+  },
 ]
 
 export default integraciones

@@ -12,7 +12,7 @@ const DiagramaIntegraciones = () => {
   return (
     <div className="DiagramaIntegraciones">
       <div className="DiagramaIntegraciones__contenedor_integraciones">
-        {integracionesRevueltas.map(integracion => (
+        {integracionesRevueltas.slice(0, 16).map(integracion => (
           <div
             key={integracion.nombre}
             className="DiagramaIntegraciones__integracion"

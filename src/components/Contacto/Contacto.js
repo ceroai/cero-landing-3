@@ -4,6 +4,12 @@ import { useEffect, useRef, useState } from 'react'
 import integraciones from '../../data/integraciones'
 import './Contacto.css'
 
+const listaIntegraciones = _.uniq(_.sortBy([
+  ...integraciones.map(i => i.nombre),
+  // Integraciones no integradas
+  'Dentidesk'
+]))
+
 const Contacto = () => {
 
   const nombreRef = useRef()
@@ -126,9 +132,9 @@ const Contacto = () => {
                 value={software}
                 onChange={e => setSoftware(e.target.value)}
               >
-                {_.sortBy(integraciones, 'nombre').map(integracion => (
-                  <option key={`option-${integracion.nombre}`} value={integracion.nombre}>
-                    {integracion.nombre}
+                {listaIntegraciones.map(integracion => (
+                  <option key={`option-${integracion}`} value={integracion}>
+                    {integracion}
                   </option>
                 ))}
                 <option>Otro</option>

@@ -8,6 +8,14 @@
   position: relative;
   display: flex;
   align-items: center;
+  --color-rojo: #ed3324;
+  --color-azul: #005bf1;
+  --color-purpura: #a506e9;
+  --color-verde: #00d200;
+  --color-texto: black;
+  --color-blanco: white;
+  --color-negro: black;
+  --color-fondo-beneficios: #f2f2f2;
 }
 
 .SlideCelularGenerica2022__titulo {
@@ -157,6 +165,7 @@
 .SlideCelularGenerica2022__celular_imagen_avatar {
   width: 3.75vmin;
   min-height: 3.75vmin;
+  filter: invert();
 }
 
 .SlideCelularGenerica2022__celular_contacto {
@@ -224,7 +233,7 @@
   display: flex;
   flex-direction: column;
   gap: .5rem;
-  animation: lax .5s 2s ease both;
+  animation: lax .5s ease both;
   box-shadow:
     .25rem .25rem 0 .2rem rgba(0, 0, 0, .35),
     0 0 2rem rgba(255, 255, 255, .5);
@@ -406,5 +415,17 @@
   100% {
     opacity: .9;
     transform: scale(1);
+  }
+}
+
+@keyframes Superior__bg {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
   }
 }

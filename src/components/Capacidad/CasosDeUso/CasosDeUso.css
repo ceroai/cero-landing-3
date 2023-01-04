@@ -33,6 +33,14 @@
   clip-path: inset(0% 0% 0% 0% round 10px);
   opacity: 0;
   transition: all .15s ease;
+  background: linear-gradient(
+    45deg,
+    var(--color-rojo) 0 15%,
+    var(--color-azul),
+    var(--color-purpura) 75%
+  );
+  background-size: 400% 400%;
+  animation: Superior__bg 15s ease-in-out infinite;
 }
 
 .CasosDeUso--visibles {

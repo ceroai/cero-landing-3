@@ -6,6 +6,13 @@
   right: 0;
   bottom: 0;
   z-index: 4;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.CasosDeUso__overlay--activo {
+  pointer-events: all;
+  opacity: 1;
 }
 
 .CasosDeUso {
@@ -15,16 +22,19 @@
     0 .25rem .15rem rgba(0, 0, 0, .15),
     0 .25rem 1rem rgba(0, 0, 0, .15);
   z-index: 20;
-  top: 5rem;
-  left: 5rem;
-  right: 5rem;
-  bottom: 5rem;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
   border-radius: 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 1rem;
   clip-path: inset(0% 0% 0% 0% round 10px);
+  opacity: 0;
+}
+
+.CasosDeUso--visibles {
+  opacity: 1;
 }
 
 .CasosDeUso__boton_cerrar {
@@ -33,4 +43,13 @@
   position: absolute;
   font-size: 1.5rem;
   opacity: .5;
+}
+
+.CasosDeUso__contenedor_botones {
+  display: flex;
+  flex-direction: column;
+}
+
+.CasosDeUso__contenedor_caso {
+  flex: 1;
 }

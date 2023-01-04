@@ -7,13 +7,12 @@ import Celular from './Celular'
 
 const Capacidad = () => {
 
-  const { casosDeUsoVisibles } = useSelector(state => state.modals)
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
   return (
     <>
-      {casosDeUsoVisibles && <CasosDeUso />}
+      <CasosDeUso />
       <div className="Capacidad">
         <h2 className="Capacidad__titulo">Tu Centro Médico a máxima capacidad</h2>
         <div className="Capacidad__textos">

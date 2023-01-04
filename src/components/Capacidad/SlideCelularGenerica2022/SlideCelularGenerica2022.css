@@ -1,9 +1,6 @@
 .SlideCelularGenerica2022 {
   animation: aparece-slide 1s ease;
-  min-height: 100vh;
-  min-width: 100vw;
-  max-height: 100vh;
-  max-width: 100vw;
+  height: 100%;
   overflow: hidden;
   position: relative;
   display: flex;

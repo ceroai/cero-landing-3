@@ -58,8 +58,50 @@
 .CasosDeUso__contenedor_botones {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .CasosDeUso__contenedor_caso {
+  flex: 4;
+}
+
+.CasosDeUso__boton {
+  padding: 1.5rem .25rem;
+  background-color: white;
   flex: 1;
+  transition: all .1s ease;
+}
+
+.CasosDeUso__boton--activo {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.CasosDeUso__boton--activo::before, .CasosDeUso__boton--activo::after {
+  content: '';
+  width: 1px;
+  height: calc(50% - 21.21px / 2);
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.CasosDeUso__boton--activo::after {
+  bottom: 0;
+  top: auto ;
+}
+
+.CasosDeUso__marca_seleccion {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: calc(100%);
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  top: calc(50% - 21.21px / 2);
+  transform: rotate(45deg);
+  transform-origin: 0% 0%;
 }

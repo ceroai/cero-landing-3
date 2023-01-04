@@ -472,8 +472,13 @@ const CasosDeUso = () => {
             <button
               onClick={() => setIndiceCasoSeleccionado(i)}
               key={`boton-caso-${i}`}
+              className={classNames({
+                "CasosDeUso__boton": true,
+                "CasosDeUso__boton--activo": i === indiceCasoSeleccionado
+              })}              
             >
               {caso.titulo}
+              {i === indiceCasoSeleccionado && <div className="CasosDeUso__marca_seleccion" />}
             </button>
           ))}
         </div>

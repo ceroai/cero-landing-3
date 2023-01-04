@@ -70,6 +70,8 @@
   background-color: white;
   flex: 1;
   transition: all .1s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, .15);
+  font-size: 1.05rem;
 }
 
 .CasosDeUso__boton--activo {
@@ -104,4 +106,18 @@
   top: calc(50% - 21.21px / 2);
   transform: rotate(45deg);
   transform-origin: 0% 0%;
+}
+
+.CasosDeUso__boton_cerrar {
+  color: white;
+  border: none;
+  background: none;
+  opacity: .8;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.CasosDeUso__boton_cerrar:hover {
+  opacity: 1;
 }

@@ -4,6 +4,7 @@ import { esconderCasosDeUso } from '../../../redux/ducks/modals'
 import SlideCelularGenerica2022 from '../SlideCelularGenerica2022/SlideCelularGenerica2022'
 import classNames from 'classnames'
 import './CasosDeUso.css'
+import { Icon } from '@iconify/react'
 
 const casos = [
   {
@@ -467,6 +468,13 @@ const CasosDeUso = () => {
         })}
         onClick={e => e.stopPropagation()}
       >
+        <button
+          onClick={() => dispatch(esconderCasosDeUso())}
+          className="CasosDeUso__boton_cerrar"
+          title="Cerrar ventana"
+        >
+          <Icon icon="mdi:close" />
+        </button>
         <div className="CasosDeUso__contenedor_botones">
           {casos.map((caso, i) => (
             <button

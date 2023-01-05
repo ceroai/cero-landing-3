@@ -13,7 +13,10 @@ import './App.css'
 const App = () => {
   return (
     <div className="App">
-      <BarraSuperior />
+      <Routes>
+        <Route path="/contacto" element={<BarraSuperior />} />
+        <Route path="/" element={<BarraSuperior />} />
+      </Routes>
       <Routes>
         <Route path="/contacto" element={<Contacto />} />
         <Route

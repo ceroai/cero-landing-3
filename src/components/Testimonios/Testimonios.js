@@ -10,7 +10,7 @@ const testimonios = [
     nombre: 'Pablo Magerkurth',
     cargo: 'Subgerente Servicio al Cliente',
     institucion: 'Redsalud',
-    cita: 'Me gusta trabajar con el equipo de Cero porque son abiertos, rápidos y tienen iniciativa trayendo excelentes discusiones.'
+    cita: 'Me gusta trabajar con el equipo de Cero porque son abiertos, rápidos y tienen iniciativa trayendo excelentes discusiones.',
   },
   {
     foto: fotoDiegoMoreira,
@@ -35,12 +35,15 @@ const Testimonios = () => {
         <h3 className="Testimonios__subtitulo">
           Lo que dicen quienes han confiado en nosotros
         </h3>
-        {testimonios.map(testimonio => (
+        {testimonios.map((testimonio) => (
           <div
             key={`contenedor-testimonio-${testimonio.nombre}`}
             className="Testimonios__contenedor_cita"
           >
-            <InlineIcon className="Testimonios__icono_cita" icon="mdi:format-quote-close" />
+            <InlineIcon
+              className="Testimonios__icono_cita"
+              icon="mdi:format-quote-close"
+            />
             <p className="Testimonios__cita">{testimonio.cita}</p>
             <img
               className="Testimonios__avatar"
@@ -48,7 +51,9 @@ const Testimonios = () => {
               alt={`Foto ${testimonio.nombre}`}
             />
             <p className="Testimonios__nombre">{testimonio.nombre}</p>
-            <p className="Testimonios__cargo">{testimonio.cargo} en {testimonio.institucion}</p>
+            <p className="Testimonios__cargo">
+              {testimonio.cargo} en {testimonio.institucion}
+            </p>
           </div>
         ))}
       </div>

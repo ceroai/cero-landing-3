@@ -6,13 +6,12 @@ import integraciones from '../../../data/integraciones'
 import _ from 'lodash'
 
 const DiagramaIntegraciones = () => {
-
   const integracionesRevueltas = useMemo(() => _.shuffle(integraciones), [])
 
   return (
     <div className="DiagramaIntegraciones">
       <div className="DiagramaIntegraciones__contenedor_integraciones">
-        {integracionesRevueltas.slice(0, 16).map(integracion => (
+        {integracionesRevueltas.slice(0, 16).map((integracion) => (
           <div
             key={integracion.nombre}
             className="DiagramaIntegraciones__integracion"
@@ -34,7 +33,11 @@ const DiagramaIntegraciones = () => {
       </div>
       <div className="DiagramaIntegraciones__cero">
         <div className="DiagramaIntegraciones__contenedor_logo_cero">
-          <img src={logoCero} alt="Logo CERO" className="DiagramaIntegraciones__logo_cero" />
+          <img
+            src={logoCero}
+            alt="Logo CERO"
+            className="DiagramaIntegraciones__logo_cero"
+          />
         </div>
       </div>
     </div>

@@ -24,6 +24,11 @@ export const modalsSlice = createSlice({
   },
 })
 
-export const { mostrarCasosDeUso, esconderCasosDeUso, mostrarIntegraciones, esconderIntegraciones } = modalsSlice.actions
+export const {
+  mostrarCasosDeUso,
+  esconderCasosDeUso,
+  mostrarIntegraciones,
+  esconderIntegraciones,
+} = modalsSlice.actions
 
 export default modalsSlice.reducer

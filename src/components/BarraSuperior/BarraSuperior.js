@@ -2,10 +2,12 @@ import './BarraSuperior.css'
 import logo from '../../assets/images/logo.svg'
 import { useNavigate } from 'react-router-dom/dist'
 import { useDispatch } from 'react-redux'
-import { mostrarCasosDeUso, mostrarIntegraciones } from '../../redux/ducks/modals'
+import {
+  mostrarCasosDeUso,
+  mostrarIntegraciones,
+} from '../../redux/ducks/modals'
 
 const BarraSuperior = () => {
-
   const navigate = useNavigate()
   const dispatch = useDispatch()
 

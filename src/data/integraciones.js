@@ -20,75 +20,75 @@ import logoNaturalSoft from '../assets/images/integraciones/naturalsoft.svg'
 const integraciones = [
   {
     nombre: 'Dentalink',
-    logo: logoDentalink
+    logo: logoDentalink,
   },
   {
     nombre: 'Medilink',
-    logo: logoMedilink
+    logo: logoMedilink,
   },
   {
     nombre: 'Rezebra',
-    logo: logoRezebra
+    logo: logoRezebra,
   },
   {
     nombre: 'Reservo',
-    logo: logoReservo
+    logo: logoReservo,
   },
   {
     nombre: 'SistemasExpertos',
-    logo: logoSistemasExpertos
+    logo: logoSistemasExpertos,
   },
   {
     nombre: 'Medicap',
-    logo: logoMedicap
+    logo: logoMedicap,
   },
   {
     nombre: 'Medinet',
-    logo: logoMedinet
+    logo: logoMedinet,
   },
   {
     nombre: 'Intersystems',
-    logo: logoIntersystems
+    logo: logoIntersystems,
   },
   {
     nombre: 'AgendaPro',
-    logo: logoAgendaPro
+    logo: logoAgendaPro,
   },
   {
     nombre: 'Philaxmed',
-    logo: logoPhilaxmed
+    logo: logoPhilaxmed,
   },
   {
     nombre: 'Bewe',
-    logo: logoBewe
+    logo: logoBewe,
   },
   {
     nombre: 'Codesud',
-    logo: logoCodesud
+    logo: logoCodesud,
   },
   {
     nombre: 'Kopland',
-    logo: logoKopland
+    logo: logoKopland,
   },
   {
     nombre: 'MasterKey',
-    logo: logoMasterKey
+    logo: logoMasterKey,
   },
   {
     nombre: 'Salutem',
-    logo: logoSalutem
+    logo: logoSalutem,
   },
   {
     nombre: 'ActiveCampaign',
-    logo: logoActiveCampaign
+    logo: logoActiveCampaign,
   },
   {
     nombre: 'Sked24',
-    logo: logoSked24
+    logo: logoSked24,
   },
   {
     nombre: 'NaturalSoft',
-    logo: logoNaturalSoft
+    logo: logoNaturalSoft,
   },
 ]
 

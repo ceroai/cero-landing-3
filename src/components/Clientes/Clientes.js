@@ -10,7 +10,8 @@ const Clientes = () => {
   return (
     <div className="Clientes">
       <div className="Clientes__texto">
-        <img src={logo} className="Clientes__logo_cero" alt="CERO" /> es usado por equipos de entre 10 y +10.000 profesionales
+        <img src={logo} className="Clientes__logo_cero" alt="CERO" /> es usado
+        por equipos de entre 10 y +10.000 profesionales
       </div>
       <div className="Clientes__logos">
         <img
@@ -18,11 +19,7 @@ const Clientes = () => {
           src={logoRedSalud}
           alt="Logo RedSalud"
         />
-        <img
-          className="Clientes__logo"
-          src={logoNorden}
-          alt="Logo Norden"
-        />
+        <img className="Clientes__logo" src={logoNorden} alt="Logo Norden" />
         <img
           className="Clientes__logo Clientes__logo--sanasalud"
           src={logoSanasalud}

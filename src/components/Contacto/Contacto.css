@@ -22,8 +22,8 @@
 }
 
 .Contacto__bajada {
-  font-size: .9rem;
-  opacity: .8;
+  font-size: 0.9rem;
+  opacity: 0.8;
   max-width: 30ch;
   line-height: 1.5;
 }
@@ -46,7 +46,7 @@
 .Contacto__campo {
   display: flex;
   flex-direction: column;
-  gap: .25rem;
+  gap: 0.25rem;
   grid-column: span 2;
   width: 30ch;
 }
@@ -57,30 +57,30 @@
 
 .Contacto__input {
   padding: 1rem;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   border: 1px solid lightgray;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .Contacto__label_campo {
   font-weight: bold;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .Contacto__select {
   padding: 1rem;
-  border-radius: .25rem;
-  font-size: .8rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
   border: 1px solid lightgray;
 }
 
 .Contacto__boton {
   background-color: black;
   color: white;
-  padding: .75rem .25rem;
-  border-radius: .35rem;
+  padding: 0.75rem 0.25rem;
+  border-radius: 0.35rem;
   font-weight: 600;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-top: 2rem;
 }
 
@@ -96,15 +96,14 @@
 .Contacto__mensaje_enviado {
   background-color: white;
   padding: 2rem;
-  box-shadow:
-    0 0 .3rem 2rem rgba(255, 255, 255, .25),
-    0 0 .3rem -.1rem rgba(0, 0, 0, .35);
+  box-shadow: 0 0 0.3rem 2rem rgba(255, 255, 255, 0.25),
+    0 0 0.3rem -0.1rem rgba(0, 0, 0, 0.35);
   z-index: 2;
   line-height: 1.5;
   display: flex;
   flex-direction: column;
   text-align: center;
-  animation: aparece-mensaje-enviado .5s ease both;
+  animation: aparece-mensaje-enviado 0.5s ease both;
 }
 
 .Contacto__mensaje_enviado_titulo {
@@ -114,7 +113,6 @@
 }
 
 @media (orientation: portrait) {
-
   .Contacto__contenedor_central {
     display: flex;
     flex-direction: column;
@@ -148,7 +146,7 @@
 
   .Contacto__campo {
     width: 100%;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   .Contacto__input {
@@ -174,13 +172,12 @@
   .Contacto__mensaje_enviado_titulo {
     font-size: 3rem;
   }
-
 }
 
 @keyframes aparece-mensaje-enviado {
   0% {
     opacity: 0;
-    transform: scale(.9);
+    transform: scale(0.9);
   }
   100% {
     opacity: 1;

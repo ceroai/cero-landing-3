@@ -35,7 +35,8 @@ const HeroImagen = () => {
         </div>
         <div className="HeroImagen__celular HeroImagen__celular--3">
           <p className="HeroImagen__mensaje HeroImagen__mensaje--entrante">
-            <strong>Juan</strong>, vienes a tu cita <strong>mañana a las 5 pm</strong>?
+            <strong>Juan</strong>, vienes a tu cita{' '}
+            <strong>mañana a las 5 pm</strong>?
           </p>
           <p className="HeroImagen__mensaje HeroImagen__mensaje--saliente">
             <strong>Claro!</strong> 👍 Nos vemos
@@ -43,7 +44,8 @@ const HeroImagen = () => {
         </div>
         <div className="HeroImagen__celular HeroImagen__celular--5">
           <p className="HeroImagen__mensaje HeroImagen__mensaje--entrante">
-            <strong>Belén</strong>, se liberó una hora con el Dr. Parra <strong>a las 5 pm</strong>, te sirve?
+            <strong>Belén</strong>, se liberó una hora con el Dr. Parra{' '}
+            <strong>a las 5 pm</strong>, te sirve?
           </p>
           <p className="HeroImagen__mensaje HeroImagen__mensaje--saliente">
             Si! Por favor llevaba tiempo esperándola 😊
@@ -51,10 +53,12 @@ const HeroImagen = () => {
         </div>
         <div className="HeroImagen__celular HeroImagen__celular--6">
           <p className="HeroImagen__mensaje HeroImagen__mensaje--saliente">
-            Gaby, lo siento, <strong>no alcanzo a llegar</strong> a la cita con el Dr. Parra 😔
+            Gaby, lo siento, <strong>no alcanzo a llegar</strong> a la cita con
+            el Dr. Parra 😔
           </p>
           <p className="HeroImagen__mensaje HeroImagen__mensaje--entrante">
-            No hay problema <strong>Andrea</strong>! Te sirve el <strong>viernes a las 3pm</strong>?
+            No hay problema <strong>Andrea</strong>! Te sirve el{' '}
+            <strong>viernes a las 3pm</strong>?
           </p>
           <p className="HeroImagen__mensaje HeroImagen__mensaje--saliente">
             <strong>Sí</strong>! Gracias

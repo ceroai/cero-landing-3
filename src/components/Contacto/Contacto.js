@@ -4,14 +4,15 @@ import { useEffect, useRef, useState } from 'react'
 import integraciones from '../../data/integraciones'
 import './Contacto.css'
 
-const listaIntegraciones = _.uniq(_.sortBy([
-  ...integraciones.map(i => i.nombre),
-  // Integraciones no integradas
-  'Dentidesk'
-]))
+const listaIntegraciones = _.uniq(
+  _.sortBy([
+    ...integraciones.map((i) => i.nombre),
+    // Integraciones no integradas
+    'Dentidesk',
+  ])
+)
 
 const Contacto = () => {
-
   const nombreRef = useRef()
   const [nombre, setNombre] = useState('')
   const [seudonimo, setSeudonimo] = useState('')
@@ -24,7 +25,7 @@ const Contacto = () => {
 
   useEffect(() => nombreRef.current?.focus(), [])
 
-  const contactar = e => {
+  const contactar = (e) => {
     e.preventDefault()
     const params = new URLSearchParams()
     params.append('nombre', nombre)
@@ -35,16 +36,18 @@ const Contacto = () => {
     params.append('software', software)
     params.append('form-name', 'contactoCero')
     params.append('subject', 'Contacto a través de Cero.ai')
-    axios.post('/',
-      params,
-      { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
-    ).then(() => {
-      setMailEnviado(true)
-      setEnviando(false)
-    }).catch(() => {
-      setMailEnviado(false)
-      setEnviando(false)
-    })
+    axios
+      .post('/', params, {
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      })
+      .then(() => {
+        setMailEnviado(true)
+        setEnviando(false)
+      })
+      .catch(() => {
+        setMailEnviado(false)
+        setEnviando(false)
+      })
   }
 
   return (
@@ -56,7 +59,12 @@ const Contacto = () => {
               <h1 className="Contacto__mensaje_enviado_titulo">¡Gracias!</h1>
               <p>Recibimos tu información</p>
               <p>Pronto nos pondremos en contacto contigo</p>
-              <button className="Contacto__boton" onClick={() => setMailEnviado(false)}>Aceptar</button>
+              <button
+                className="Contacto__boton"
+                onClick={() => setMailEnviado(false)}
+              >
+                Aceptar
+              </button>
             </div>
           </div>
         )}
@@ -65,15 +73,12 @@ const Contacto = () => {
           <p className="Contacto__bajada">
             Prueba nuestro servicio <strong>gratis</strong> y verás cómo
             aumentan tus ingresos ahorrando miles de horas de coordinación,
-            disminuyendo el No Show y aumentando la cantidad de pacientes
-            que puedes atender. Déjanos tus datos y te contactaremos.
+            disminuyendo el No Show y aumentando la cantidad de pacientes que
+            puedes atender. Déjanos tus datos y te contactaremos.
           </p>
         </div>
         <div className="Contacto__contenedor_formulario">
-          <form
-            className="Contacto__formulario"
-            onSubmit={contactar}
-          >
+          <form className="Contacto__formulario" onSubmit={contactar}>
             <div className="Contacto__campo">
               <label className="Contacto__label_campo">Nombre</label>
               <input
@@ -82,7 +87,7 @@ const Contacto = () => {
                 className="Contacto__input"
                 ref={nombreRef}
                 value={nombre}
-                onChange={e => setNombre(e.target.value)}
+                onChange={(e) => setNombre(e.target.value)}
               />
             </div>
             <div className="Contacto__campo" style={{ display: 'none' }}>
@@ -91,7 +96,7 @@ const Contacto = () => {
                 type="text"
                 className="Contacto__input"
                 value={seudonimo}
-                onChange={e => setSeudonimo(e.target.value)}
+                onChange={(e) => setSeudonimo(e.target.value)}
               />
             </div>
             <div className="Contacto__campo">
@@ -101,7 +106,7 @@ const Contacto = () => {
                 required
                 className="Contacto__input"
                 value={email}
-                onChange={e => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="Contacto__campo">
@@ -111,7 +116,7 @@ const Contacto = () => {
                 required
                 className="Contacto__input"
                 value={telefono}
-                onChange={e => setTelefono(e.target.value)}
+                onChange={(e) => setTelefono(e.target.value)}
               />
             </div>
             <div className="Contacto__campo">
@@ -121,18 +126,20 @@ const Contacto = () => {
                 required
                 className="Contacto__input"
                 value={organizacion}
-                onChange={e => setOrganizacion(e.target.value)}
+                onChange={(e) => setOrganizacion(e.target.value)}
               />
             </div>
             <div className="Contacto__campo">
-              <label className="Contacto__label_campo">Software de agenda</label>
+              <label className="Contacto__label_campo">
+                Software de agenda
+              </label>
               <select
                 className="Contacto__select"
                 required
                 value={software}
-                onChange={e => setSoftware(e.target.value)}
+                onChange={(e) => setSoftware(e.target.value)}
               >
-                {listaIntegraciones.map(integracion => (
+                {listaIntegraciones.map((integracion) => (
                   <option key={`option-${integracion}`} value={integracion}>
                     {integracion}
                   </option>

@@ -16,17 +16,20 @@ const App = () => {
       <BarraSuperior />
       <Routes>
         <Route path="/contacto" element={<Contacto />} />
-        <Route path="/" element={
-          <>
-            <Hero />
-            <Clientes />
-            <Capacidad />
-            <Integraciones />
-            <Tecnologia />
-            <Testimonios />
-            <Apoyo />
-          </>
-        } />
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <Clientes />
+              <Capacidad />
+              <Integraciones />
+              <Tecnologia />
+              <Testimonios />
+              <Apoyo />
+            </>
+          }
+        />
       </Routes>
     </div>
   )

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './reset.css'
 import './variables.css'
 import App from './components/App'
-import { BrowserRouter as Router } from "react-router-dom"
+import { BrowserRouter as Router } from 'react-router-dom'
 import { store } from './redux/store'
 import { Provider } from 'react-redux'
 
@@ -17,4 +17,3 @@ root.render(
     </Router>
   </React.StrictMode>
 )
-

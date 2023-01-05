@@ -40,7 +40,7 @@ const SlideCelularGenerica2022 = ({
 
   const nombreEmpresa = useMemo(
     () => nombresEmpresas[Math.floor(nombresEmpresas.length * Math.random())],
-    [titulo]
+    []
   )
 
   return (
